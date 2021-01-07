@@ -1,5 +1,5 @@
 function menu(){
-    const bars=document.querySelector('.bars')
+    const bars=document.querySelector('.icon')
     const nav=document.querySelector('.menu ul')
     bars.addEventListener('click',function(){
         nav.classList.toggle('nav-active')
