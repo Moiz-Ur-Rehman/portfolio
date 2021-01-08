@@ -9,6 +9,10 @@ function loader(){
     var preloader=document.querySelector('#loading')
     preloader.style.display='none'
 }
+function success(){
+    var success=document.querySelector('#success')
+    success.style.display='none'
+}
 menu()
 loader()
 
