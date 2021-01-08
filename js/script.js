@@ -5,21 +5,14 @@ function menu(){
         nav.classList.toggle('nav-active')
     })
 }
-function loader(){
-    var preloader=document.querySelector('#loading')
-    preloader.style.display='none'
-}
 function success(){
     var success=document.querySelector('#success')
     success.style.display='none'
 }
 menu()
-loader()
 
 const names=document.getElementById("name")
 const email=document.getElementById("email")
-const message=document.getElementById("message")
-const form=document.getElementById("form")
 const Error=document.getElementById("Error")
 
 form.addEventListener('submit', (e)=>{
@@ -34,17 +27,14 @@ form.addEventListener('submit', (e)=>{
     }
 })
 
-
-
 const controls=document.querySelector(".controls");
 const container=document.querySelector(".thumbnail-container");
 const allBox=container.children;
 const containerWidth=container.offsetWidth;
 const margin=30;
- var items=0;
- var totalItems=0;
- var jumpSlideWidth=0;
-
+var items=0;
+var totalItems=0;
+var jumpSlideWidth=0;
 
 // item setup per slide
 
@@ -93,29 +83,21 @@ function start(){
 
   // when click on numbers slide to next slide
 function controlSlides(ele){
-     // select controls children  'ul' element 
-     const ul=controls.children;
-
-     // select ul children 'li' elements;
-    const li=ul[0].children
-      
-     
-     var active;
-
-     for(let i=0;i<li.length;i++){
-         if(li[i].className=="active"){
-             // find who is now active
-             active=i;
-             // remove active class from all 'li' elements
-             li[i].className="";
-         }
-     }
-     // add active class to current slide
-     ele.className="active";
-
-     var numb=(ele.id-1)-active;
-        jumpSlideWidth=jumpSlideWidth+(containerWidth*numb);
-     container.style.marginLeft=-jumpSlideWidth + "px";
+    const ul=controls.children;
+    const li=ul[0].children  
+    var active;
+    for(let i=0;i<li.length;i++){
+        if(li[i].className=="active"){
+            // find who is now active
+            active=i;
+            // remove active class from all 'li' elements
+            li[i].className="";
+        }
+    }
+    // add active class to current slide
+    ele.className="active";
+    var numb=(ele.id-1)-active;
+    jumpSlideWidth=jumpSlideWidth+(containerWidth*numb);
+    container.style.marginLeft=-jumpSlideWidth + "px";
 }
-
 window.onload=slider();
