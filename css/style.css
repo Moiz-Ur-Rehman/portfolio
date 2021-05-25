@@ -7,6 +7,47 @@
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+/* loader */
+.loader{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 99999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.loader-wrap{
+    height: 80px;
+    width: 80px;
+    border-top: 3px solid lightblue;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 1s infinite linear}@keyframes spin{from{transform: rotate(0deg);} to{transform: rotate(360deg);}
+}
+.loader-wrap1{
+    height: 70px;
+    width: 70px;
+    border-left: 3px solid #f25a41;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader-wrap2{
+    height: 60px;
+    width: 60px;
+    border-right: 3px solid yellow;
+    border-radius: 100%;
+}
+
 #success{
     position: fixed;
     width: 100%;
@@ -68,6 +109,7 @@
     max-height: 100px;
     opacity: 85%;
     z-index: 2;
+    justify-content: space-between;
 }
 .logo img{
     height: 130px;
@@ -95,14 +137,15 @@
     width: 100%;
 }
 .nav-link{
-    text-align: right;
     list-style: none;
     margin-top: 40px;
     margin-bottom: 40px;
+    margin-left: 240px;
+    display: flex;
+    justify-content: space-between;
 }
 .menu ul li{
-    margin-left: 100px;
-    display: inline-flex;
+    margin-top: 5px;
 }
 .menu ul li a{
     text-decoration: none;
@@ -114,8 +157,8 @@
     border-radius: 15px;
     padding: 6px 20px;
     color: white;
-    margin-left: 50px;
     margin-right: 50px;
+    margin-bottom: 5px;
     text-decoration: none;
     transition: 0.2s;
 }
@@ -182,24 +225,21 @@
 .inner{
     margin-top: 10px;
     position:absolute;
-    height:30px;
+    
     line-height:37px;
     overflow:hidden;
     display:inline-block;
 }
 .inner span::before{
-    content: "Web Automator";
-    animation:animate 8s ease infinite;
+    content: "React Developer";
+    animation-delay: 5s;
+    animation:animate 8s ease infinite 2s;
     position:relative;
 }
-@keyframes animate{
-    30%{
-      content: "Web Developer";
-    }  
-    75%{
-        content: "UI/UX Designer";
+@keyframes animate{ 
+    35%{
+        content: "Web Developer";
     }
-    
 }
   
 
@@ -365,6 +405,7 @@
     border-radius: 35px;
     align-items: center;
     display: flex;
+    justify-content: space-between;
     margin-top: 50px;
     box-shadow: 0px 10px 30px black;
 }
@@ -380,6 +421,7 @@
 .service-wrap h2{
     color: #bbbbbb;
     margin: 0px 50px;
+    font-size: larger;
 }
 .service-wrap span{
     background-image: linear-gradient(to bottom,#f87400,#7C3A00);
@@ -390,9 +432,6 @@
     font-weight: bold;
     margin-right: 10px;
     margin-left: 10px;
-}
-.service-wrap .ui{
-    margin-left: 100px;
 }
 
 
@@ -579,6 +618,10 @@
 }
 .skillset img{
     min-width: 60px;
+    max-width: 60px;
+}
+.skillset p{
+    font-size: 17px;
 }
 .skills-slider-container{
     height: 400px;
@@ -684,8 +727,9 @@
     grid-column-start: 1;
     grid-column-end: 3;
 }
-.contactus-content-gmail{
+.contactus-content-gmail , .contactus-content-phone{
     display: flex;
+    font-size: 18px;
 }
 .contactus-content-gmail a{
     display: flex;
@@ -699,9 +743,6 @@
 }
 .contactus-content-gmail img{
     max-width: 70px;
-}
-.contactus-content-phone{
-    display: flex;
 }
 .contactus-content-phone img{
     max-width: 70px;
@@ -842,9 +883,6 @@
     .logo img{
         margin-left: 0px;
     }
-    .menu ul li{
-        margin-left: 80px;
-    }
     .picture img{
         max-height: 500px;
     }
@@ -863,8 +901,8 @@
     }
 }
 @media only screen and (max-width: 1135px){
-    .menu ul li{
-        margin-left: 50px;
+    .nav-link{
+        margin-left: 80px;
     }
     .picture img{
         max-height: 400px;
@@ -876,7 +914,6 @@
         font-size: 15px;
     }
     .service-wrap h2{
-        margin: 0px 0px 0px 10px;
         font-size: 24px;
     }
     .service-wrap span{
@@ -939,12 +976,9 @@
         height: 50%;
     }
     .menu ul li{
-        margin-left: 0px;
         height: 90px;
     }
     .menu .button{
-        
-        margin-left: 0px;
         margin-right: 0px;
     }
     .logo img{
@@ -997,7 +1031,7 @@
         width: 90%;
     }
 }
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 745px){
     #aboutMe::before , #services::before , #projects::before , #testimonial::before , #contactus::before{ 
         margin-top: -80px;
         height: 80px;
@@ -1165,7 +1199,11 @@
         max-width: 60px;
     }
     .contactus-content-gmail a p{
-        padding: 20px 10px 0px 10px;
+        padding: 20px 8px 0px 8px;
+        font-size: 15px;
+    }
+    .contactus-content-phone p{
+        padding: 15px 35px;
         font-size: 15px;
     }
     .contactus-content-phone img{
@@ -1232,9 +1270,10 @@
     }
     .skillset img{
         min-width: 48px;
+        max-width: 48px;
     }
     .skillset p{
-        font-size: 16px;
+        font-size: 12px;
     }
     .section5{
         height: 600px;
@@ -1263,7 +1302,7 @@
         max-width: 50px;
     }
     .contactus-content-gmail a p{
-        padding: 15px 8px 0px 8px;
+        padding-top: 15px;
     }
     .contactus-content-phone img{
         padding: 0px 8px;

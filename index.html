@@ -10,6 +10,13 @@
     <title>PortFolio</title>
 </head>
 <body>
+    <div class="loader">
+        <div class="loader-wrap">
+            <div class="loader-wrap1">
+                <div class="loader-wrap2"></div>
+            </div>
+        </div>
+    </div>
     <div id="success">
         <div class="success-content">
             <img src="./images/check.svg" alt="check">
@@ -502,14 +509,14 @@
                 </div>
                 <div data-aos="fade-left">
                     <h2>
-                        UX/UI Designer
+                        FrontEnd Development
                     </h2>
-                    <span class="ui">2</span> <img src="images/ui.svg" alt="Design icon">
+                    <span>2</span> <img src="images/ui.svg" alt="Design icon">
                 </div>
                 <div data-aos="fade-right">
                     <img src="images/robot.svg">
                     <span>3</span>
-                    <h2> Web Automation</h2>
+                    <h2> BackEnd Development</h2>
                 </div>
             </div>
         </div>
@@ -577,30 +584,30 @@
                     <div data-aos="zoom-in">
                         <div class="rows">
                             <div class="skillset">
-                                <img src="images/python.png" alt="python">
-                                <p>80%</p>
+                                <img src="images/react.svg" alt="react">
+                                <p>React</p>
                             </div>
                             <div class="skillset">
-                                <img src="images/js.png" alt="js">
-                                <p>80%</p>
+                                <img src="images/js.png" alt="javascript">
+                                <p>JS</p>
                             </div>
                             <div class="skillset">
-                                <img src="images/c++.png" alt="c++">
-                                <p>80%</p>
+                                <img src="images/c-sharp.png" alt="C-sharp">
+                                <p>C#</p>
                             </div>
                         </div>
                         <div class="rows">
                             <div class="skillset">
                                 <img src="images/html.png" alt="html">
-                                <p>95%</p>
+                                <p>HTML</p>
                             </div>
                             <div class="skillset">
                                 <img src="images/css.png" alt="css">
-                                <p>85%</p>
+                                <p>CSS</p>
                             </div>
                             <div class="skillset">
                                 <img src="images/mysql.png" alt="mysql">
-                                <p>70%</p>
+                                <p>MySQL</p>
                             </div>
                         </div>
                     </div>
@@ -609,16 +616,30 @@
                     <div data-aos="zoom-in">
                         <div class="rows">
                             <div class="skillset">
+                                <img src="images/python.png" alt="python">
+                                <p>Python</p>
+                            </div>
+                            <div class="skillset">
+                                <img src="images/c++.png" alt="c++">
+                                <p>C++</p>
+                            </div>
+                            <div class="skillset">
                                 <img src="images/php.png" alt="php">
-                                <p>50%</p>
+                                <p>PHP</p>
+                            </div>
+                        </div>
+                        <div class="rows">
+                            <div class="skillset">
+                                <img src="images/firebase-icon.svg" alt="firebase">
+                                <p>FireBs</p>
                             </div>
                             <div class="skillset">
-                                <img src="images/django.png" alt="django">
-                                <p>50%</p>
+                                <img src="images/GitHub.png" alt="GitHub">
+                                <p>GitHub</p>
                             </div>
                             <div class="skillset">
-                                <img src="images/java.png" alt="java">
-                                <p>60%</p>
+                                <img src="images/bootstrap.svg" alt="firebase">
+                                <p>BootStp</p>
                             </div>
                         </div>
                     </div>
@@ -759,6 +780,12 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
+        });
+        let loader = document.querySelector('.loader');
+        let body = document.querySelector('body');
+        window.addEventListener('load',function(){
+           loader.style.display='none';
+           body.style.overflowY="auto";
         });
       </script>
 </body>
