@@ -108,7 +108,7 @@ body{
     background-color: black;
     max-height: 100px;
     opacity: 85%;
-    z-index: 2;
+    z-index: 9;
     justify-content: space-between;
 }
 .logo img{

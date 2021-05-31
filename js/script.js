@@ -5,12 +5,60 @@ function menu(){
         nav.classList.toggle('nav-active')
     })
 }
+menu()
+//GSAP
+gsap.from('.name',{duration:1,x:-100})
+gsap.registerPlugin(ScrollTrigger);
+gsap.from(".about", {
+    scrollTrigger: {
+        trigger: ".about",
+        toggleActions: "restart reverse restart reverse"
+    },
+    duration: 1.5,
+    opacity: 0
+});
+gsap.from(".service1", {
+    scrollTrigger: {
+        trigger: ".service1",
+        toggleActions: "restart reverse restart reverse"
+    },
+    duration: 1,
+    opacity: 0,
+    x: -100
+});
+gsap.from(".service2", {
+    scrollTrigger: {
+        trigger: ".service2",
+        toggleActions: "restart reverse restart reverse"
+    },
+    duration: 1,
+    opacity: 0,
+    x: 100
+});
+gsap.from(".service3", {
+    scrollTrigger: {
+        trigger: ".service3",
+        toggleActions: "restart reverse restart reverse"
+    },
+    duration: 1,
+    opacity: 0,
+    x: -100
+});
+gsap.from(".skillset", {
+    scrollTrigger: {
+        trigger: ".skillset",
+        toggleActions: "restart none none none"
+    },
+    duration: 1,
+    opacity: 0,
+    y: -50,
+    stagger: .1
+});
+//Message sent
 function success(){
     var success=document.querySelector('#success')
     success.style.display='none'
 }
-menu()
-
 const names=document.getElementById("name")
 const email=document.getElementById("email")
 const Error=document.getElementById("Error")
@@ -26,7 +74,25 @@ form.addEventListener('submit', (e)=>{
         Error.innerText=Message
     }
 })
-
+//loader
+let loader = document.querySelector('.loader');
+let body = document.querySelector('body');
+window.addEventListener('load', function () {
+    loader.style.display = 'none';
+    body.style.overflowY = "auto";
+});
+//swiper
+var swiper = new Swiper('.swiper-container', {
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+/*
 const controls=document.querySelector(".controls");
 const container=document.querySelector(".thumbnail-container");
 const allBox=container.children;
@@ -101,3 +167,4 @@ function controlSlides(ele){
     container.style.marginLeft=-jumpSlideWidth + "px";
 }
 window.onload=slider();
+*/

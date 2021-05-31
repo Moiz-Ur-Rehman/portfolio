@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    outline-style: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    background-image: url("../images/projects-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.projects{
+    margin: 50px 0px;
+    display: flex;
+    justify-content: center;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px 20px;
+}
+.project-card{
+    width: 380px;
+    height: 250px;
+    position: relative;
+}
+.cardFront img{
+    width: 380px;
+    height: 250px;
+}
+.project-card-overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 380px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 0;
+}
+.cardFront, .cardBack{
+    height: 250px;
+    width: 380px;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+.cardBack{
+    background: rgba(0, 0, 0, 1);
+    color: white;
+    text-align: center;
+}
+.cardBack h3{
+    color: #f87400;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.cardBack p{
+    font-size: 17px;
+    margin: 0 3px;
+}
+
+@media only screen and (max-width: 1235px){
+    .projects-container{
+        grid-template-columns: auto auto;
+    }
+}
+@media only screen and (max-width: 840px){
+    .projects-container{
+        grid-template-columns: auto;
+    }
+}
+@media only screen and (max-width: 450px){
+    .project-card, .cardFront img, .project-card-overlay, .cardFront, .cardBack{
+        width: 340px;
+    }
+    .cardBack h3{
+        margin: 4px 0;
+        font-size: 18px;
+    }
+    .cardBack p{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 376px){
+    .project-card, .cardFront img, .project-card-overlay, .cardFront, .cardBack{
+        width: 290px;
+        height: 210px;
+    }
+    
+}
