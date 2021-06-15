@@ -6,6 +6,7 @@
     outline-style: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
 }
 body{
     overflow-y: hidden;
@@ -288,11 +289,13 @@ body{
 .about h2{
     min-height: 85px;
     color: gray;
+    font-size: 22px;
 }
 .about h3{
     line-height: 35px;
     color: #bbbbbb;
     font-weight: lighter;
+    font-size: 21px;
 }
 .about h3 b{
     font-size: 22px;
@@ -483,92 +486,57 @@ body{
     width: 100%;
     margin: 40px 0px;
 }
-.card{
-    background-color: #232427;
-    position: relative;
-    min-width: 300px;
-    max-width: 350px;
-    height: 440px;
-    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-                inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-                5px 5px 15px rgba(0, 0, 0, 0.3),
-                -5px -5px 15px rgba(255, 255, 255, 0.1);
+.card-image img{
     border-radius: 15px;
-    margin: 30px 0px;
+    object-fit: fill;
+    width: 375px;
+    height: 270px;
+    opacity: 0.7;
 }
-.card .card-content{
-    background: #2a2b2f;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    border-radius: 15px;
-    border: 2px solid #1e1f23;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    transform: 0.5s;
+.card-info h2{
+    color: rgb(160, 160, 160);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.card-info p{
+    color: gray;
+    font-weight: lighter;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.card-button{
+    background-color: rgb(100, 100, 100);
+    padding: 8px;
+    color: #F2EBE3;
+    border: none;
+    cursor: pointer;
+}
+.card-button:hover{
+    background-image: linear-gradient(to bottom,#f87400,#7C3A00);
+}
+.card{
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
 }
-.card .card-content:hover{
-    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
-}
-.card-content h2{
-    position: absolute;
-    top: -10px;
-    right: 30px;
-    font-size: 8em;
-    color: rgba(255, 255, 255, 0.05);
-    font-family: sans-serif;
-}
-.card-content img{
-   width: 100%;
-   max-height: 180px;
-   border-radius: 20px;
-   opacity: 0.85;
-}
-.card-content h3{
-    margin: 5px 0px;
-    color: #bbbbbb;
-    margin-bottom: 30px;
-}
-.card-content a{
-    color: black;
-    background-image: linear-gradient(to bottom,#f87400,#7C3A00);
-    padding: 10px 22px;
-    margin-top: 15px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 400;
-    position: relative;
+.card-container{
+    width: min-content;
 }
 .thumbnail-slider{
 	width: 100%;
-	float: left;
-	overflow: hidden;
+    overflow: hidden;
 }
-
-.thumbnail-slider .thumbnail-container{
+.thumbnail-container{
 	width: 100%;
-	float: left;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
 	transition: margin 1s ease;
 }
-
-.thumbnail-slider .item{
-  float: left;
-  display: flex;
-  justify-content: center;
-}
-
 .thumbnail-slider .controls{
 	width: 100%;
 	float: left;
 	padding:15px;
 }
-
 .thumbnail-slider .controls ul{
 	display: block;
 	text-align: center;
@@ -892,12 +860,8 @@ body{
     .service-wrap img{
         margin: 0px 20px;
     }
-    .card{
-        min-width: 314px;
-        height: 430px;
-    }
-    .card-content img{
-        max-height: 170px;
+    .card-image img{
+        width: 350px;
     }
 }
 @media only screen and (max-width: 1135px){
@@ -935,6 +899,9 @@ body{
     }
     .service-wrap{
         width: 50%;
+    }
+    .card-image img{
+        width: 330px;
     }
     .contactus-content{
         width: 80%;
@@ -990,8 +957,14 @@ body{
     .about{
         font-size: 80%;
     }
-    .about h3 b{
+    .about h2{
+        font-size: 21px;
+    }
+    .about h3{
         font-size: 18px;
+    }
+    .about h3 b{
+        font-size: 20px;
     }
     .svg-animation svg{
         max-width: 300px;
@@ -1013,13 +986,6 @@ body{
     }
     .service-container{
         height: 580px;
-    }
-    .card{
-        min-width: 300px;
-        height: 420px;
-    }
-    .card-content img{
-        max-height: 160px;
     }
     .testimonial-slide div img{
         max-width: 160px;
@@ -1085,18 +1051,22 @@ body{
     }
     .about-container{
         flex-direction: column;
+        height: fit-content;
     }
     .about{
-        font-size: 70%;
         width: 75%;
-        margin: 0px auto;
+        margin: 0px auto 20px auto;
+    }
+    .about h3{
+        font-size: 17px;
     }
     .about h3 b{
-        font-size: 16px;
+        font-size: 18px;
     }
     .about h1{
         text-align: center;
         line-height: 50px;
+        font-size: 27px;
     }
     .svg-animation{
         width: 100%;
@@ -1106,7 +1076,7 @@ body{
         max-height: 300px;
     }
     .service-wrap{
-        width: 60%;
+        width: 65%;
     }
     .service-wrap div{
         height: 60px;
@@ -1134,20 +1104,6 @@ body{
     .project-content{
         margin: 0px;
     }
-    .card{
-        min-width: 270px;
-        height: 400px;
-        box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.2),
-                inset -3px -3px 5px rgba(255, 255, 255, 0.1),
-                3px 3px 3px rgba(0, 0, 0, 0.3),
-                -3px -3px 5px rgba(255, 255, 255, 0.1);
-    }
-    .card-content h2{
-        font-size: 6em;
-    }
-    .card-content img{
-        max-height: 140px;
-    }
     .project-wrap h1{
         font-size: 27px;
     }
@@ -1174,6 +1130,12 @@ body{
     }
     .testimonial-slide div img{
         max-width: 150px;
+    }
+    .testimonial-wrap h1{
+        font-size: 27px;
+    }
+    .testimonial-slide div h3{
+        font-size: 19px;
     }
     .contactus-header h1{
         font-size: 27px;
@@ -1217,6 +1179,12 @@ body{
     }
 }
 @media only screen and (max-width: 520px){
+    .about{
+        width: 85%;
+    }
+    .about h2{
+        font-size: 20px;
+    }
     #success .success-content{
         width: 60%;
         font-size: 75%;
@@ -1231,7 +1199,7 @@ body{
         font-size: 18px;
     }
     .service-wrap{
-        width: 67%;
+        width: 70%;
     }
     .service-wrap div{
         height: 50px;
@@ -1239,9 +1207,6 @@ body{
     .service-wrap span{
         font-size: 30px;
         padding: 10px 17px 10px 17px;
-    }
-    .service-wrap h2{
-        font-size: 16px;
     }
     .service-wrap img{
         height: 30px;
@@ -1252,15 +1217,11 @@ body{
     .service-container{
         height: 500px;
     }
-    .card{
-        min-width: 230px;
-        height: 330px;
+    .card-info h2{
+        font-size: 19px;
     }
-    .card-content img{
-        max-height: 110px;
-    }
-    .card-content h2{
-        font-size: 5.6em;
+    .card-info p{
+        font-size: 15px;
     }
     .skills-slider-container{
         height: 350px;
@@ -1285,12 +1246,6 @@ body{
     .testimonial-container::before{
         border-top-left-radius: 120px;
         border-bottom-right-radius: 120px;
-    }
-    .testimonial-wrap h1{
-        font-size: 27px;
-    }
-    .testimonial-slide div h3{
-        font-size: 19px;
     }
     .testimonial-slide div p{
         font-size: 15px;
@@ -1378,8 +1333,17 @@ body{
     .about{
         width: 90%;
     }
+    .about h2{
+        font-size: 19px;
+    }
+    .about h3{
+        font-size: 16px;
+    }
+    .about h3 b{
+        font-size: 17px;
+    }
     .service-wrap{
-        width: 78%;
+        width: 85%;
     }
     .service-wrap div{
         height: 45px;
@@ -1402,6 +1366,16 @@ body{
 @media only screen and (max-width: 400px){
     .menu ul li{
         height: 70px;
+    }
+    .about h2{
+        font-size: 18px;
+    }
+    .card-image img{
+        width: 300px;
+        height: 250px;
+    }
+    .thumbnail-container{
+        margin: 15px 0px;
     }
     .skillset{
         padding: 12px 22px 8px 22px;

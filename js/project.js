@@ -16,7 +16,7 @@ if (window.innerWidth > 600) {
           .to(element, .5, { z: 0 }, .5);
       element.animation = tl;
   };
-
+  
   projectCards.forEach(cardHover);
   function cardHover(card) {
       card.addEventListener('mouseenter', function () {
@@ -41,38 +41,22 @@ ScrollTrigger.create({
   }
 });
 gsap.set(".project-card", {transformOrigin: "right center", force3D: true});
-const projects = document.querySelectorAll('.projects-full-screen');
+const fullProjects = document.querySelectorAll('.projects-full-screen');
 const fullscreenImage = document.querySelectorAll('.full-screen-image');
 const closeIcon = document.querySelectorAll('.close-icon');
 const body = document.querySelector('body');
-
-projectCards[0].addEventListener('click', () => {
-  projects[0].style.visibility = 'visible';
-  body.style.overflowY = 'hidden'
-  fullscreenImage[0].style.animation = 'slide 15s 2s infinite alternate ease-in-out';
-  closeIcon[0].addEventListener('click',()=>{
-    projects[0].style.visibility = 'hidden';
-    body.style.overflowY = 'auto'
-    fullscreenImage[0].style.animation = 'none';
+const clickCard = (i)=>{
+  projectCards[i].addEventListener('click', () => {
+    fullProjects[i].style.visibility = 'visible';
+    body.style.overflowY = 'hidden'
+    fullscreenImage[i].style.animation = 'slide 15s 2s infinite alternate ease-in-out';
+    closeIcon[i].addEventListener('click',()=>{
+      fullProjects[i].style.visibility = 'hidden';
+      body.style.overflowY = 'auto'
+      fullscreenImage[i].style.animation = 'none';
+    });
   });
-});
-projectCards[1].addEventListener('click', () => {
-  projects[1].style.visibility = 'visible';
-  body.style.overflowY = 'hidden'
-  fullscreenImage[1].style.animation = 'slide 15s 2s infinite alternate ease-in-out';
-  closeIcon[1].addEventListener('click',()=>{
-    projects[1].style.visibility = 'hidden';
-    body.style.overflowY = 'auto'
-    fullscreenImage[1].style.animation = 'none';
-  });
-});
-projectCards[2].addEventListener('click', () => {
-  projects[2].style.visibility = 'visible';
-  body.style.overflowY = 'hidden'
-  fullscreenImage[2].style.animation = 'slide 15s 2s infinite alternate ease-in-out';
-  closeIcon[2].addEventListener('click',()=>{
-    projects[2].style.visibility = 'hidden';
-    body.style.overflowY = 'auto'
-    fullscreenImage[2].style.animation = 'none';
-  });
-});
+}
+for(let i=0;i<fullProjects.length;i++){
+  clickCard(i)
+}

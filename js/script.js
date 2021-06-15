@@ -92,7 +92,7 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
-/*
+
 const controls=document.querySelector(".controls");
 const container=document.querySelector(".thumbnail-container");
 const allBox=container.children;
@@ -106,8 +106,8 @@ var jumpSlideWidth=0;
 
 responsive=[
 {breakPoint:{width:0,item:1}}, //if width greater than 0 (1 item will show) 
-{breakPoint:{width:600,item:2}}, //if width greater than 600 (2  item will show) 
-{breakPoint:{width:1000,item:3}} //if width greater than 1000 (4 item will show) 
+{breakPoint:{width:720,item:2}}, //if width greater than 600 (2  item will show) 
+{breakPoint:{width:1050,item:3}} //if width greater than 1000 (3 item will show) 
 ]
 
 function slider(){
@@ -146,7 +146,6 @@ function start(){
       }
       controls.appendChild(ul);
 }
-
   // when click on numbers slide to next slide
 function controlSlides(ele){
     const ul=controls.children;
@@ -167,4 +166,3 @@ function controlSlides(ele){
     container.style.marginLeft=-jumpSlideWidth + "px";
 }
 window.onload=slider();
-*/
