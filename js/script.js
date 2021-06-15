@@ -166,3 +166,25 @@ function controlSlides(ele){
     container.style.marginLeft=-jumpSlideWidth + "px";
 }
 window.onload=slider();
+
+const cardButton = document.querySelectorAll('.card-button')
+const projectsFullScreen = document.querySelectorAll('.projects-full-screen');
+const projectsFullImage = document.querySelectorAll('.full-screen-image');
+const closeIconProjects = document.querySelectorAll('.close-icon');
+const clickCard = (i)=>{
+    cardButton[i].addEventListener('click',()=>{
+        projectsFullScreen[i].style.visibility = 'visible';
+        projectsFullScreen[i].style.transform = 'translateX(0%)';
+        projectsFullImage[i].style.animation = 'slide 15s 2s infinite alternate ease-in-out';
+        body.style.overflowY = 'hidden'
+        closeIconProjects[i].addEventListener('click',()=>{
+            projectsFullScreen[i].style.visibility = 'hidden';
+            projectsFullScreen[i].style.transform = 'translateX(-100%)';
+            projectsFullImage[i].style.animation = 'none';
+            body.style.overflowY = 'auto'
+        });
+    });
+}
+for(let i=0;i<cardButton.length;i++){
+    clickCard(i)
+  }

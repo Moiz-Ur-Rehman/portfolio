@@ -48,9 +48,11 @@ const body = document.querySelector('body');
 const clickCard = (i)=>{
   projectCards[i].addEventListener('click', () => {
     fullProjects[i].style.visibility = 'visible';
+    fullProjects[i].style.transform = 'translateX(0%)';
     body.style.overflowY = 'hidden'
     fullscreenImage[i].style.animation = 'slide 15s 2s infinite alternate ease-in-out';
     closeIcon[i].addEventListener('click',()=>{
+      fullProjects[i].style.transform = 'translateX(-100%)';
       fullProjects[i].style.visibility = 'hidden';
       body.style.overflowY = 'auto'
       fullscreenImage[i].style.animation = 'none';
