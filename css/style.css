@@ -278,7 +278,7 @@ body{
 }
 .about{
     width: 50%;
-    margin-top: 130px;
+    margin-top: auto;
     margin-bottom: auto;
     z-index: 1;
 }
@@ -290,6 +290,7 @@ body{
     min-height: 85px;
     color: gray;
     font-size: 22px;
+    margin-bottom: 10px;
 }
 .about h3{
     line-height: 35px;
@@ -299,6 +300,19 @@ body{
 }
 .about h3 b{
     font-size: 22px;
+}
+.resume{
+    margin: 30px 0px;
+}
+.resume-link{
+    text-decoration: none;
+    background-image: linear-gradient(to bottom,#f87400,#7C3A00);
+    padding: 15px 20px 15px 15px;
+    color: #F2EBE3;
+    border-bottom-right-radius: 40px;
+}
+.resume-link:hover{
+    background-image: linear-gradient(to bottom,#dd6904,#6b3505);
 }
 .svg-animation{
     width: 50%;
@@ -492,6 +506,10 @@ body{
     width: 375px;
     height: 270px;
     opacity: 0.7;
+    cursor: pointer;
+}
+.card-image img:hover{
+    opacity: 0.9;
 }
 .card-info h2{
     color: rgb(160, 160, 160);
@@ -502,7 +520,7 @@ body{
     color: gray;
     font-weight: lighter;
     font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .card-button{
     background-color: rgb(100, 100, 100);
@@ -661,13 +679,14 @@ body{
     color: #F2EBE3;
 }
 .testimonial-slide div p{
+    margin-top: 5px;
     color: gray;
 }
 .testimonial-slider-container{
     height:540px;
 }
 .testimonial-slide div img{
-    max-width: 170px;
+    max-width: 150px;
     border-radius: 200px;
 }
 
@@ -1276,6 +1295,14 @@ body{
     .contactus-button button{
         padding: 14px 22px;
         font-size: 18px;
+    }
+    .resume{
+        margin: 20px 0px;
+    }
+    .resume-link{
+        padding: 12px 18px 12px 12px;
+        border-bottom-right-radius: 40px;
+        font-size: 15px;
     }
     .footer-content{
         display: block;

@@ -14,9 +14,11 @@
     transform: translatex(-100%);
     z-index: 999999;
 }
+
 .full-screen-image img{
     width: 100%;
     height: 100%;
+    display: block;
 }
 @keyframes slide {
     0%{
