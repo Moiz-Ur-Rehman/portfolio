@@ -48,7 +48,25 @@ body{
     border-right: 3px solid yellow;
     border-radius: 100%;
 }
-
+.reveal1{
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    z-index: 9999999;
+    position: fixed;
+    transform: translateX(0%);
+    transition: 3s;
+}
+.reveal2{
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    z-index: 9999999;
+    position: fixed;
+    right: 0;
+    transform: translateX(0%);
+    transition: 3s;
+}
 #success{
     position: fixed;
     width: 100%;
@@ -422,7 +440,7 @@ body{
     border-radius: 35px;
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 50px;
     box-shadow: 0px 10px 30px black;
 }
@@ -500,11 +518,22 @@ body{
     width: 100%;
     margin: 40px 0px;
 }
+.all-projects{
+    position: absolute;
+    right: 6%;
+    top: 4%;
+    text-decoration: none;
+    color: #F2EBE3;
+    background-image: linear-gradient(to bottom,#f87400,#7C3A00);
+    padding: 10px 10px;
+}
+.all-projects:hover{
+    background-image: linear-gradient(to bottom,#dd6904,#6b3505);
+}
 .card-image img{
     border-radius: 15px;
-    object-fit: fill;
-    width: 375px;
-    height: 270px;
+    width: 400px;
+    object-fit: contain;
     opacity: 0.7;
     cursor: pointer;
 }
@@ -880,7 +909,7 @@ body{
         margin: 0px 20px;
     }
     .card-image img{
-        width: 350px;
+        width: 360px;
     }
 }
 @media only screen and (max-width: 1135px){
@@ -920,7 +949,7 @@ body{
         width: 50%;
     }
     .card-image img{
-        width: 330px;
+        width: 340px;
     }
     .contactus-content{
         width: 80%;
@@ -1126,6 +1155,10 @@ body{
     .project-wrap h1{
         font-size: 27px;
     }
+    .all-projects{
+        padding: 5px 8px;
+        font-size: 17px;
+    }
     .section5 h1:nth-child(1){
         font-size: 27px;
         padding: 0px 0px 20px 0px;
@@ -1257,6 +1290,10 @@ body{
     }
     .section5{
         height: 600px;
+    }
+    .all-projects{
+        top: 10%;
+        right: 10%;
     }
     .testimonial-container{
         border-top-left-radius: 120px;
@@ -1399,7 +1436,6 @@ body{
     }
     .card-image img{
         width: 300px;
-        height: 250px;
     }
     .thumbnail-container{
         margin: 15px 0px;

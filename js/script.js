@@ -7,7 +7,11 @@ function menu() {
 }
 menu();
 //GSAP
-gsap.from(".name", { duration: 1, x: -100 });
+if (window.innerWidth > 745) {
+  gsap.from(".name", { duration: 2, x: -100 }).delay(1);
+  gsap.from(".navbar", { duration: 2, y: -100 }).delay(1);
+  gsap.from(".picture img", { duration: 2, x: 100 }).delay(1);
+}
 gsap.registerPlugin(ScrollTrigger);
 const animate = (Class, xValue, dur) => {
   gsap.from(Class, {
@@ -66,9 +70,13 @@ form.addEventListener("submit", (e) => {
 });
 //loader
 let loader = document.querySelector(".loader");
+let reveal1 = document.querySelector(".reveal1");
+let reveal2 = document.querySelector(".reveal2");
 let body = document.querySelector("body");
 window.addEventListener("load", function () {
   loader.style.display = "none";
+  reveal1.style.transform = "translateX(-100%)";
+  reveal2.style.transform = "translateX(100%)";
   body.style.overflowY = "auto";
 });
 //swiper
