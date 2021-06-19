@@ -173,9 +173,9 @@ body{
 .menu .button{
     background-color:#F87400;
     border: none;
-    border-radius: 15px;
-    padding: 6px 20px;
-    color: white;
+    border-radius: 20px;
+    padding: 7px 20px;
+    color: #F2EBE3;
     margin-right: 50px;
     margin-bottom: 5px;
     text-decoration: none;
@@ -292,7 +292,7 @@ body{
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 .about{
     width: 50%;
@@ -312,7 +312,7 @@ body{
 }
 .about h3{
     line-height: 35px;
-    color: #bbbbbb;
+    color: rgb(187, 187, 187);
     font-weight: lighter;
     font-size: 21px;
 }
@@ -326,6 +326,7 @@ body{
     text-decoration: none;
     background-image: linear-gradient(to bottom,#f87400,#7C3A00);
     padding: 15px 20px 15px 15px;
+    box-shadow: 2px 5px 5px rgba(248, 116, 0, 0.1);
     color: #F2EBE3;
     border-bottom-right-radius: 40px;
 }
@@ -522,10 +523,11 @@ body{
     position: absolute;
     right: 6%;
     top: 4%;
+    border-bottom-right-radius: 30px;
     text-decoration: none;
     color: #F2EBE3;
     background-image: linear-gradient(to bottom,#f87400,#7C3A00);
-    padding: 10px 10px;
+    padding: 10px 13px;
 }
 .all-projects:hover{
     background-image: linear-gradient(to bottom,#dd6904,#6b3505);
@@ -873,7 +875,7 @@ body{
     margin-top: 20px;
 }
 .contactus-button button{
-    background-image: linear-gradient(to bottom,#f87400,#7C3A00);
+    background-image: linear-gradient(to bottom,rgb(248, 126, 0),#7c3a00);
     padding: 18px 30px;
     color: #F2EBE3;
     font-size: 20px;
@@ -1215,6 +1217,7 @@ body{
     .all-projects{
         padding: 5px 8px;
         font-size: 17px;
+        border-bottom-right-radius: 20px;
     }
     .section5 h1:nth-child(1){
         font-size: 27px;
@@ -1349,7 +1352,7 @@ body{
         height: 600px;
     }
     .all-projects{
-        top: 10%;
+        top: 11%;
         right: 10%;
     }
     .testimonial-container{
