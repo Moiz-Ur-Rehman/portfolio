@@ -541,12 +541,12 @@ body{
     opacity: 0.9;
 }
 .card-info h2{
-    color: rgb(160, 160, 160);
+    color: rgb(200, 200, 200);
     font-size: 22px;
     margin-bottom: 5px;
 }
 .card-info p{
-    color: gray;
+    color: rgb(170, 170, 170);
     font-weight: lighter;
     font-size: 18px;
     margin-bottom: 10px;
