@@ -7,11 +7,6 @@ function menu() {
 }
 menu();
 //GSAP
-if (window.innerWidth > 745) {
-  gsap.from(".name", { duration: 2, x: -100 }).delay(1);
-  gsap.from(".navbar", { duration: 2, y: -100 }).delay(1);
-  gsap.from(".picture img", { duration: 2, x: 100 }).delay(1);
-}
 gsap.registerPlugin(ScrollTrigger);
 const animate = (Class, xValue, dur) => {
   gsap.from(Class, {
@@ -78,6 +73,11 @@ window.addEventListener("load", function () {
   reveal1.style.transform = "translateX(-100%)";
   reveal2.style.transform = "translateX(100%)";
   body.style.overflowY = "auto";
+  if (window.innerWidth > 745) {
+    gsap.from(".name", { duration: 2, x: -100 });
+    gsap.from(".navbar", { duration: 2, y: -100 });
+    gsap.from(".picture img", { duration: 2, x: 100 });
+  }
 });
 //swiper
 var swiper = new Swiper(".swiper-container", {
