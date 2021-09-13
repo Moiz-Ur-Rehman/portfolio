@@ -699,6 +699,7 @@ body{
 }
 .skills-slider-container{
     height: 400px;
+    position: relative;
 }
 .swiper-slide {
     text-align: center;
