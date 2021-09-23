@@ -73,7 +73,7 @@ window.addEventListener("load", function () {
   reveal1.style.transform = "translateX(-100%)";
   reveal2.style.transform = "translateX(100%)";
   body.style.overflowY = "auto";
-  if (window.innerWidth > 745) {
+  if (window.innerWidth > 745 && screen.width > 745) {
     gsap.from(".name", { duration: 2, x: -100 });
     gsap.from(".navbar", { duration: 2, y: -100 });
     gsap.from(".picture img", { duration: 2, x: 100 });
@@ -107,7 +107,7 @@ responsive = [
 ];
 function slider() {
   for (let i = 0; i < responsive.length; i++) {
-    if (window.innerWidth > responsive[i].breakPoint.width) {
+    if (window.innerWidth > responsive[i].breakPoint.width && screen.width > responsive[i].breakPoint.width) {
       items = responsive[i].breakPoint.item;
     }
   }
