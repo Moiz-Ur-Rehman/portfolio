@@ -700,6 +700,7 @@ body{
 .skills-slider-container{
     height: 400px;
     position: relative;
+    overflow: hidden;
 }
 .swiper-slide {
     text-align: center;
@@ -773,6 +774,7 @@ body{
 }
 .testimonial-slider-container{
     height:540px;
+    overflow: hidden;
 }
 .testimonial-slide div img{
     max-width: 150px;
