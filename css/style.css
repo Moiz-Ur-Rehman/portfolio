@@ -203,6 +203,7 @@ body{
     background-color: black;
     display: flex;
     padding-top: 80px;
+    /* min-height: 80vh; */
 }
 .name{
     width: 60%;
