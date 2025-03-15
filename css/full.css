@@ -62,6 +62,24 @@
 .full-screen-info a:hover{
     color: darkgray;
 }
+.inline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: list-counter;
+    font-size: 20px;
+}
+
+.inline-list li {
+    display: inline;
+    counter-increment: list-counter;
+    margin-right: 10px;
+}
+
+.inline-list li::before {
+    content: counter(list-counter) ". ";
+}
+
 .close-icon{
     position: absolute;
     top: 2%;
@@ -90,7 +108,7 @@
     .full-screen-info h2{
         font-size: 21px;
     }
-    .full-screen-info p{
+    .full-screen-info p, .inline-list{
         font-size: 18px;
     }
 }
@@ -115,7 +133,7 @@
         font-size: 19px;
         margin-bottom: 30px;
     }
-    .full-screen-info p{
+    .full-screen-info p, .inline-list{
         font-size: 16px;
     }
     .full-screen-info a{
@@ -153,7 +171,7 @@
         font-size: 18px;
         margin-bottom: 10px;
     }
-    .full-screen-info p{
+    .full-screen-info p, .inline-list{
         font-size: 15px;
     }
     .full-screen-info a{

@@ -228,6 +228,9 @@ body{
     color: #fbcb96;
     font-weight: lighter;
 }
+.picture {
+    visibility: hidden;
+}
 .picture img{
     max-height: 550px;
 }
@@ -242,25 +245,32 @@ body{
 
 /* Text Rotation Animation */
 
-.inner{
+.inner {
     margin-top: 10px;
-    position:absolute;
-    
-    line-height:37px;
-    overflow:hidden;
-    display:inline-block;
+    position: absolute;
+    line-height: 37px;
+    overflow: hidden;
+    display: inline-block;
 }
-.inner span::before{
-    content: "React Developer";
-    animation-delay: 5s;
-    animation:animate 8s ease infinite 2s;
-    position:relative;
+
+.inner span::before {
+    content: "Full Stack Developer";
+    animation: animate 12s ease-in-out infinite;
+    position: relative;
 }
-@keyframes animate{ 
-    35%{
-        content: "Web Developer";
+
+@keyframes animate {
+    0%, 33% {
+        content: "Full Stack Developer";
+    }
+    34%, 66% {
+        content: "React Developer";
+    }
+    67%, 100% {
+        content: "NodeJS Developer";
     }
 }
+
   
 
 
@@ -1144,6 +1154,7 @@ body{
     .picture{  
         display: flex;
         justify-content: center;
+        visibility: visible;
     }
     .hello{
         line-height: 30px;
