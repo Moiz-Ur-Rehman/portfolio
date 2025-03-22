@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - 404</title>
+    <style>
+      /* Basic Reset */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: "Arial", sans-serif;
+      }
+
+      /* Dark Background Styling */
+      body {
+        background-color: #121212;
+        color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      /* Heading Styling */
+      h1 {
+        font-size: 120px;
+        margin: 0;
+        color: #f44336;
+        text-shadow: 3px 3px 8px rgba(255, 0, 0, 0.6);
+      }
+
+      /* Message Styling */
+      p {
+        font-size: 18px;
+        color: #ccc;
+        margin: 20px 0;
+      }
+
+      /* Link Styling */
+      a {
+        color: #1976d2;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+
+      /* Button Styling for Home Redirect */
+      .redirect-btn {
+        margin-top: 30px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #1976d2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .redirect-btn:hover {
+        background-color: #ff9800;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>404</h1>
+    <p>Oops! The page you are looking for does not exist.</p>
+    <p>
+      If you were looking for a specific page, it might have been moved or
+      deleted.
+    </p>
+
+    <a href="/" class="redirect-btn">Go to Homepage</a>
+
+    <script type="text/javascript">
+      setTimeout(function () {
+        window.location.href = "/";
+      }, 5000);
+    </script>
+  </body>
+</html>
