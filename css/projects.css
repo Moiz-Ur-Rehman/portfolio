@@ -26,8 +26,8 @@ body{
 .loader {
     width: 100%;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0);
+    /* backdrop-filter: blur(10px); */
     z-index: 99999999;
     display: flex;
     justify-content: center;
@@ -73,43 +73,6 @@ body{
     border-right: 3px solid yellow;
     border-radius: 100%;
 }
-
-
-/* .loader{
-    width: 100%;
-    height: 100vh;
-    background-color: transparent;
-    z-index: 99999999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-}
-.loader-wrap{
-    height: 80px;
-    width: 80px;
-    border-top: 3px solid lightblue;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: spin 1s infinite linear}@keyframes spin{from{transform: rotate(0deg);} to{transform: rotate(360deg);}
-}
-.loader-wrap1{
-    height: 70px;
-    width: 70px;
-    border-left: 3px solid #f25a41;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.loader-wrap2{
-    height: 60px;
-    width: 60px;
-    border-right: 3px solid yellow;
-    border-radius: 100%;
-} */
 
 .projects{
     margin: 50px 0px;
