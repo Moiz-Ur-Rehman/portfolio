@@ -1,3 +1,4 @@
+/*
 *{
     margin: 0;
     padding: 0;
@@ -12,7 +13,7 @@ body{
     overflow-y: hidden;
     overflow-x: hidden;
 }
-/* loader */
+
 .loader{
     width: 100%;
     height: 100vh;
@@ -106,7 +107,7 @@ body{
     cursor: pointer;
     outline: none;
 }
-/* Scroll Bar Animation */
+
 ::-webkit-scrollbar{
     width: 11px;
     background: black;
@@ -119,7 +120,8 @@ body{
     background: linear-gradient(grey, #2c3e50);
     border-radius: 10px;
 }
-/* header css */
+
+
 .navbar{
     display: flex;
     width: 100%;
@@ -197,13 +199,11 @@ body{
     box-shadow: 0 0 10px #f87400, 0 0 40px #f87400, 0 0 80px #f87400;
 }
 
-/* below header css */
 
 .section1{
     background-color: black;
     display: flex;
     padding-top: 80px;
-    /* min-height: 80vh; */
 }
 .name{
     width: 60%;
@@ -243,8 +243,6 @@ body{
 }
 
 
-/* Text Rotation Animation */
-
 .inner {
     margin-top: 10px;
     position: absolute;
@@ -274,7 +272,6 @@ body{
   
 
 
-/** About Me Section **/
 
 .section2{
     background-image: linear-gradient(to bottom,#000000,#1D1B1B);
@@ -356,7 +353,7 @@ body{
     max-height: 450px;
 }
 
-/* About Me Animation */
+
 #right-hand{
     animation: hand 1s  infinite linear alternate;
     transform-origin: center;
@@ -433,7 +430,6 @@ body{
     }
 }
 
-/** Services Section **/
 
 .service-container{
     background-color: #1D1B1B;
@@ -482,7 +478,6 @@ body{
 }
 
 
-/** Projects Section **/
 
 .section4{
     background-color: #1D1B1B;
@@ -564,7 +559,7 @@ body{
     font-size: 18px;
     margin-bottom: 10px;
 }
-/* Card Button Animation */
+
 .card-button{
     background-color: rgb(100, 100, 100);
     padding: 8px;
@@ -674,7 +669,6 @@ body{
 }
 
 
-/* Skills */
 
 .section5{
     background-color: #3C3A3A;
@@ -716,7 +710,6 @@ body{
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -730,8 +723,6 @@ body{
     -webkit-align-items: center;
     align-items: center;
 }
-
-/* Testimonial */
 
 .section6{
     padding-bottom: 20px;
@@ -792,7 +783,6 @@ body{
     border-radius: 200px;
 }
 
-/* Contact*/
 
 .section7{
     background-image: linear-gradient(to bottom,#342C1F,#372D20,#392E20,#483420);
@@ -902,8 +892,6 @@ body{
     background-image: linear-gradient(to bottom,#dd6904,#6b3505);
 }
 
-/* Footer */
-
 .footer{
     position: relative;
     display: flex;
@@ -964,8 +952,6 @@ body{
     margin: 15px 0px;
 }
 
-
-/*Responsiveness*/
 
 
 @media only screen and (max-width:1265px){
@@ -1519,3 +1505,4 @@ body{
         padding: 12px 22px 8px 22px;
     }
 }
+**/

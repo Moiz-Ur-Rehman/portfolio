@@ -62,3 +62,9 @@ const clickCard = (i)=>{
 for(let i=0;i<fullProjects.length;i++){
   clickCard(i)
 }
+
+let loader = document.querySelector(".loader");
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+  body.style.overflowY = "auto";
+});
